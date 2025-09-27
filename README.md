@@ -53,12 +53,12 @@ python fsm_network_simulation.py
 Python Code Snippet
 fsm = NetworkProtocolFSM()
 
-fsm.on_event('connect_request')  # Idle → Connecting
-fsm.on_event('ack_received')     # Connecting → Transmitting
-fsm.on_event('send_data')        # Data sent, remain Transmitting
-fsm.on_event('disconnect')       # Transmitting → Disconnected
-fsm.on_event('connect_request')  # Disconnected → Connecting
-fsm.on_event('timeout')          # Connecting → Disconnected
+fsm.on_event('connect_request')  # Idle → Connecting     
+fsm.on_event('ack_received')     # Connecting → Transmitting      
+fsm.on_event('send_data')        # Data sent, remain Transmitting     
+fsm.on_event('disconnect')       # Transmitting → Disconnected      
+fsm.on_event('connect_request')  # Disconnected → Connecting        
+fsm.on_event('timeout')          # Connecting → Disconnected      
 
 Sample Output
 Current State: Idle | Event: connect_request
